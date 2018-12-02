@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'EBusiness.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.path.join(BASE_DIR, 'db'),
+        'NAME':  'EBusiness',
         'USER': 'root',
-        'PASSSWORD': 'root',
-        'HOST': '192.168.3.177',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
