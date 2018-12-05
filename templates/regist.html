@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<form action="{% url 'my_login' %}">
+<form action="{% url 'my_login' %}" method="post">
+    {% csrf_token %}
     <div class="form-group">
         <label class="sr-only" for="exampleInputAmount">账号</label>
         <div class="input-group">
