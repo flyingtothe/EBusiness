@@ -2,6 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def login(request):
+# 登陆
+def Login(request):
     if request.method == 'GET':
-        return render(request, template_name='login.html')
+        return render(request, 'login.html')
+
+# 注册
+def Regist(request):
+    if request.method == 'GET':
+        return render(request, 'regist.html')
