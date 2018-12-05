@@ -1,0 +1,17 @@
+.form-container{
+    width: 300px;
+    margin: 0 auto;
+    
+}
+
+.input-group-addon{
+    padding: 4px 8px;
+}
+
+.page-title{
+    text-align: center;
+}
+
+.additional{
+    text-align: right;
+}
