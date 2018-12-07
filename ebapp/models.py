@@ -35,7 +35,7 @@ class Users(models.Model):
     # 账号
     user_account = models.CharField(max_length=50)
     # 密码
-    user_password = models.CharField(max_length=16)
+    user_password = models.CharField(max_length=10000)
     # 姓名
     user_name = models.CharField(max_length=10)
     # 注册时间
@@ -43,9 +43,9 @@ class Users(models.Model):
     # 昵称
     user_nick_name = models.CharField(max_length=20)
     # 性别
-    user_gender = models.CharField(max_length=2)
+    user_gender = models.CharField(max_length=20)
     # 生日
-    user_birthday = models.DateField()
+    user_birthday = models.DateField(null=True)
     # 居住地
     user_address = models.CharField(max_length=30)
     # 收货地址
