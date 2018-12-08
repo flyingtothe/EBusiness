@@ -14,19 +14,19 @@
         <h2 class="text-center">欢迎注册</h2>
         <div class="form-group">
             <div class="input-group">
-                <div class="input-group-addon">账号</div>
+                <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"/></div>
                 {{ register_form.account}}
             </div>
         </div>
         <div class="form-group">
             <div class="input-group">
-                <div class="input-group-addon">密码</div>
-                {{ register_form.password1 }}
+                <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"/></div>
+                {{ register_form.password1}}
             </div>
         </div>
         <div class="form-group">
             <div class="input-group">
-                <div class="input-group-addon">确认密码</div>
+                <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"/></div>
                 {{ register_form.password2 }}
             </div>
         </div>
@@ -38,7 +38,9 @@
             {{ register_form.captcha.errors }}
             {{ register_form.captcha }}
         </div>
-        <button type="reset" class="btn btn-default pull-left">重置</button>
-        <button type="submit" class="btn btn-primary">提交</button>
+        <div class="func">
+            <button type="reset" class="btn btn-default pull-left">重置</button>
+            <button type="submit" class="btn btn-primary pull-right">提交</button>
+        </div>
     </form>
 {% endblock %}

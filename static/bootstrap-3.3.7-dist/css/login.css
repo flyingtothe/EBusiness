@@ -24,38 +24,24 @@ body {
   border-bottom-left-radius: 0;
 }
 .form-login input[type="password"] {
-  /*margin-bottom: 10px;*/
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
 .page-title{
     text-align: center;
 }
-
+.func{
+    max-width: 330px;
+    padding: 10px 0px;
+}
 .additional{
     text-align: right;
 }
-
 .input-group-addon{
     height: 45px;
+    padding: 4px 8px;
 }
-
-
 .form-container{
     width: 300px;
     margin: 0 auto;
-
-}
-
-.input-group-addon{
-    padding: 4px 8px;
-}
-
-.page-title{
-    text-align: center;
-}
-
-.additional{
-    text-align: right;
 }
