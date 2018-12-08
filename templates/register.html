@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}注册{% endblock %}
+{% block head %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap-3.3.7-dist/css/register.css' %}">
+{% endblock %}
+
+{% block main %}
+    <form class='form-register' action="{% url 'my_register' %}" method="POST">
+        {% if message %}<div class="alert alert-warning">{{ message }}</div>{% endif %}
+        {% csrf_token %}
+
+        <h2 class="text-center">欢迎注册</h2>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">账号</div>
+                {{ register_form.account}}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">密码</div>
+                {{ register_form.password1 }}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">确认密码</div>
+                {{ register_form.password2 }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ register_form.sex.label_tag }}
+            {{ register_form.sex }}
+        </div>
+        <div class="form-group">
+            {{ register_form.captcha.errors }}
+            {{ register_form.captcha }}
+        </div>
+        <button type="reset" class="btn btn-default pull-left">重置</button>
+        <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+{% endblock %}

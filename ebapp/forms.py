@@ -14,5 +14,5 @@ class RegisterForm(forms.Form):
     account = forms.CharField(label="账号", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
     password1 = forms.CharField(label="密码", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label="确认密码", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
-    gender = forms.ChoiceField(label='性别', choices=gender)
+    sex = forms.ChoiceField(label='性别', choices=gender)
     captcha = CaptchaField(label='验证码')

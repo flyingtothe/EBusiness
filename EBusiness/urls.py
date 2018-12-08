@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('captcha', include('captcha.urls')),
     path('login/', views.Login, name='my_login'),
-    path('regist/', views.Regist, name='my_regist'),
+    path('regist/', views.Regist, name='my_register'),
     path('index/', views.Index, name='my_index'),
     path('logout/', views.Logout, name='my_logout'),
 ] + static(settings.STATIC_URL)
