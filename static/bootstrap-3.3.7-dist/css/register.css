@@ -39,3 +39,10 @@
     max-width: 330px;
     height: 34px;
 }
+.main-container{
+    height: auto;
+    width: 25%;
+    background: white;
+    border: black 1px solid;
+    margin: auto;
+}

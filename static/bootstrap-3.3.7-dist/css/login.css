@@ -45,3 +45,10 @@ body {
     width: 300px;
     margin: 0 auto;
 }
+.main-container{
+    height: auto;
+    width: 25%;
+    background: white;
+    border: black 1px solid;
+    margin: auto;
+}

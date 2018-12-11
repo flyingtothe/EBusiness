@@ -12,6 +12,7 @@ def hash_code(s, salt='nicai'):# 加点盐
 
 # 主页
 def Index(request):
+
     return render(request, 'index.html')
 
 # 登陆
