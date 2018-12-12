@@ -10,11 +10,12 @@
     border-bottom: black solid 1px;
     width: 100%;
 }
-.col-lg-6 .input-group{
-    margin: 0px auto;
+.input-group{
+    width: 100%;
+    margin: 0px 0px;
 }
-.input-group .form-control{
-    width: 600px;
+.form-control{
+    width: 550px;
     height: 50px;
 }
 .btn{
@@ -23,4 +24,16 @@
 img{
     width: 100px;
     height: 100px;
+}
+.input-group-btn{
+   width: 600px;
+}
+.navbar-collapse{
+    padding: 0px;
+}
+.navbar-nav ul li{
+    width: 100px;
+}
+h3{
+    margin: 0px;
 }

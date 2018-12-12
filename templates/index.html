@@ -1,46 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}主页{% endblock %}
-{% block head %}
-    {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/index.css' %}">
-{% endblock %}
+{% block head %}{% endblock %}
 {% block main %}
-    <div class="main-container">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <div >
-                            <img class="pull-left" src="{% static 'img/bg.jpg' %}">
-                        </div>
-                        <span class="">
-                            <input type="text" class="form-control" placeholder="搜你喜欢">
-                            <button class="btn btn-default" type="button">Go!</button>
-                        </span>
-                        <div>
-                            <img class="pull-right" src="{% static 'img/bg.jpg' %}">
-                        </div>
-                    </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                        <li><a href="#">你好啊</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-    </div>
+    {% for good in goods %}
+        <div>
+            <span>{{ good.name }}</span>
+        </div>
+    {% endfor %}
 {% endblock %}

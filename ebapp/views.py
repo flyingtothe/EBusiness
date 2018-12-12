@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse
+from django.forms.models import model_to_dict
 from ebapp import models, forms
 import hashlib
 
@@ -12,8 +13,10 @@ def hash_code(s, salt='nicai'):# 加点盐
 
 # 主页
 def Index(request):
-
-    return render(request, 'index.html')
+    good = models.Goods.objects.all().first()
+    goods = model_to_dict(good)
+    print(goods)
+    return render(request, 'index.html', context=goods)
 
 # 登陆
 def Login(request):

@@ -7,8 +7,8 @@ class Goods(models.Model):
     name = models.CharField(max_length=128)         # 商品名称
     type = models.CharField(max_length=64)          # 类型
     introduce = models.TextField()                  # 介绍
-    shelf_life = models.DateField(blank=True)       # 保质期
-    warranty = models.DateField(blank=True)         # 保修期
+    shelf_life = models.DateField(null=True)       # 保质期
+    warranty = models.DateField(null=True)         # 保修期
     product_param = models.TextField()              # 产品参数
     price = models.FloatField()                     # 单价
     inventory = models.FloatField()                 # 库存
