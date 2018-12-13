@@ -15,6 +15,5 @@ img{
     border-bottom: black solid 1px;
 }
 .navbar-form{
-    padding: 0px;
-    margin: 0px;
+    text-align: center;
 }
