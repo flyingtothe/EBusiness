@@ -13,10 +13,8 @@ def hash_code(s, salt='nicai'):# 加点盐
 
 # 主页
 def Index(request):
-    good = models.Goods.objects.all().first()
-    goods = model_to_dict(good)
-    print(goods)
-    return render(request, 'index.html', context=goods)
+    good = models.Goods.objects.filter()
+    return render(request, 'index.html', {'good': good})
 
 # 登陆
 def Login(request):

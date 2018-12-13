@@ -1,10 +1,43 @@
 {% extends 'base.html' %}
 {% block title %}主页{% endblock %}
-{% block head %}{% endblock %}
+{% block head %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/index.css' %}">
+{% endblock %}
 {% block main %}
-    {% for good in goods %}
-        <div>
-            <span>{{ good.name }}</span>
-        </div>
-    {% endfor %}
+    <div class="main-container">
+        <nav class="navbar navbar-default">
+            <div class="search">
+                <div class="pull-left"><img src="{% static 'img/bg.jpg' %}"></div>
+                <form class="navbar-form" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </form>
+                <div class="pull-right"><img src="{% static 'img/bg.jpg' %}"></div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+            <div>
+                {% for good in good %}
+                    <div class="pull-left" href="#">
+                        <div><img class="img-rounded" src="{% static 'img/logo.jpg' %}"></div>
+                        <a href="#">{{ good.name }}</a>
+                        <a href="#">{{ good.price }}</a>
+                        <a href="#">{{ good.type }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </nav>
+    </div>
 {% endblock %}

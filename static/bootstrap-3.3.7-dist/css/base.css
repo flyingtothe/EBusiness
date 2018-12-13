@@ -6,12 +6,6 @@
     padding: 0px;
     margin-left: 0px;
 }
-.seller{
-    margin: 15px;
-}
-.gps{
-    margin: 15px;
-}
 body{
     background: url(/static/img/bg.jpg) no-repeat;
     background-size: cover;
