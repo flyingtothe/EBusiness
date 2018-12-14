@@ -7,23 +7,26 @@
 {% block main %}
     <div class="main-container">
         <nav class="navbar navbar-default">
-            <div class="search">
-                <div class="pull-left"><img src="{% static 'img/bg.jpg' %}"></div>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </div>
-                </form>
-                <div class="pull-right"><img src="{% static 'img/bg.jpg' %}"></div>
+            <div class="input-group">
+                <img class="pull-left" src="{% static 'img/bg.jpg' %}">
+                <div>
+                    <input type="text" class="form-container" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                </div>
+                <img class="pull-right" src="{% static 'img/bg.jpg' %}">
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav"><h2>link</h2></ul>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                 </ul>
@@ -32,9 +35,8 @@
                 {% for good in good %}
                     <div class="pull-left" href="#">
                         <div><img class="img-rounded" src="{% static 'img/logo.jpg' %}"></div>
+                        <div>{{ good.price }}</div>
                         <a href="#">{{ good.name }}</a>
-                        <a href="#">{{ good.price }}</a>
-                        <a href="#">{{ good.type }}</a>
                     </div>
                 {% endfor %}
             </div>

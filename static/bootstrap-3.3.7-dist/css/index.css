@@ -6,14 +6,7 @@ img{
     width: 100px;
     height: 100px;
 }
-.collapse{
-    padding: 0px;
-}
-.search{
+.input-group{
     width: 100%;
-    height: 100px;
     border-bottom: black solid 1px;
-}
-.navbar-form{
-    text-align: center;
 }
