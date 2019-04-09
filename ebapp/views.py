@@ -1,15 +1,10 @@
 from django.shortcuts import render, redirect, reverse
 from django.forms.models import model_to_dict
+from ebapp.salt import hash_code
 from ebapp import models, forms
-import hashlib
 
 # Create your views here.
 
-def hash_code(s, salt='nicai'):# 加点盐
-    h = hashlib.sha256()
-    s += salt
-    h.update(s.encode())  # update方法只接收bytes类型
-    return h.hexdigest()
 
 # 主页
 def Index(request):
