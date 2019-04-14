@@ -5,7 +5,6 @@ from ebapp import models, forms
 
 # Create your views here.
 
-
 # 主页
 def Index(request):
     good = models.Goods.objects.filter()
@@ -31,9 +30,11 @@ def Login(request):
                     return redirect(reverse(viewname='my_index'))
                 else:
                     message = "密码不正确！"
+            except RuntimeError:
+                message = "WW"
             except:
                 message = "用户不存在！"
-        return render(request, 'login.html', locals())
+            return render(request, 'login.html', locals())
 
     login_form = forms.UserForm()
     return render(request, 'login.html', locals())
@@ -41,7 +42,7 @@ def Login(request):
 # 注册
 def Regist(request):
     if request.session.get('is_login', None):
-        # 登录状态不允许注册。你可以修改这条原则！
+        # 登录状态不允许注册
         return redirect(reverse(viewname='my_index'))
     if request.method == "POST":
         register_form = forms.RegisterForm(request.POST)

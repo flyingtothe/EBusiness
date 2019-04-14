@@ -30,11 +30,11 @@ class Users(models.Model):
         ('female', "女"),
     )
 
-    account = models.CharField(max_length=50, unique=True)                  # 账号
-    password = models.CharField(max_length=256)                             # 密码
+    account = models.CharField(max_length=16, unique=True)                  # 账号
+    password = models.CharField(max_length=16)                             # 密码
     c_time = models.DateTimeField(auto_now_add=True)                        # 注册时间
     nick_name = models.CharField(max_length=20)                             # 昵称
-    sex = models.CharField(max_length=32, choices=gender, default="男")     # 性别
+    sex = models.CharField(max_length=4, choices=gender, default="男")     # 性别
     birth = models.DateField(null=True)                                     # 出生日期
     address = models.CharField(max_length=30)                               # 居住地
     receive_address = models.CharField(max_length=30)                       # 收货地址
@@ -61,11 +61,11 @@ class Managers(models.Model):
         ('s_manager', '商户管理员'),
     )
 
-    account = models.CharField(max_length=50, unique=True)                        # 账号
+    account = models.CharField(max_length=16, unique=True)                        # 账号
     name = models.CharField(max_length=10)                                        # 姓名
-    password = models.CharField(max_length=256)                                   # 密码
+    password = models.CharField(max_length=16)                                   # 密码
     c_time = models.DateTimeField(auto_now_add=True)                              # 注册时间
-    sex = models.CharField(max_length=32, choices=gender, default="男")           # 性别
+    sex = models.CharField(max_length=4, choices=gender, default="男")           # 性别
     address = models.CharField(max_length=30)                                     # 居住地
     access = models.CharField(max_length=32, choices=aces, default="订单管理员")  # 权限（0是系统超级管理员，1是商户超管理员，2商户普通管理员）
 
